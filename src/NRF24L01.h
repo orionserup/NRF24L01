@@ -15,8 +15,9 @@
 #define NRFL01_H
 
 #include "RF24.h"
+#include <Arduino.h>
 
-class NRF24L01 : public {
+class NRF24L01 : public RF24 {
 
 public:
 
@@ -27,12 +28,22 @@ public:
      * @param cs_pin 
      * @param irq_pin 
      */
-    NRF24L01(const int ce_pin, const int cs_pin, const int irq_pin = -1);
+    NRF24L01(const String address, const int ce_pin, const int cs_pin, const int irq_pin = -1);
+
+    
 
 
 private:
 
+    /**
+     * @brief 
+     * 
+     */
+    void IRQHandler();
+
     int irq_pin;
+    uint8_t buffer[64];
+    uint8_t buffer_index;
 
 };
 
