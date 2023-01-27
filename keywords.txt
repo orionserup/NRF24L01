@@ -1,0 +1,12 @@
+NRF24L01            KEYWORD1
+
+TRANSMIT            KEYWORD3
+RECEIVE             KEYWORD3
+
+write               KEYWORD2
+read                KEYWORD2
+begin               KEYWORD2
+setMode             KEYWORD2
+available           KEYWORD2
+setReceiveAddress   KEYWORD2
+setTransmitAddress  KEYWORD2
